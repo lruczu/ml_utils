@@ -130,7 +130,7 @@ def df_to_dict(
     level_names: List[str],
     group_names: List[str],
     vector_name: str
-):
+) -> Dict[str, Any]:
     """
     Its purpose is the same as in 'df_to_dict_by_recursion', but
     passed arguments makes it easier to use. 
