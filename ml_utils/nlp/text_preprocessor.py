@@ -1,18 +1,12 @@
-from typing import Tuple, Union
+from operator import itemgetter
+from typing import Dict, List, Tuple, Union
 
 import pandas as pd
+from scipy import sparse
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_extraction import DictVectorizer, FunctionTransformer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.pipeline import Pipeline
-
-
-"""
-For sparse NN
-
-keras=2.0.8
-tensorflow=1.4.0
-"""
+from sklearn.pipeline import make_pipeline, make_union, Pipeline
 
 
 class Preprocessor(BaseEstimator, TransformerMixin):
